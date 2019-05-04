@@ -1,6 +1,6 @@
 //*****************************TRABALHO PRÁTICO I - PROGRAMAÇÃO ORIENTADA A OBJETOS **********************************************//
-#ifndef _MATRIZ_H
-#define _MATRIZ_H
+#ifndef MATRIZ_H
+#define MATRIZ_H
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,4 +28,5 @@ private:
     int _numero_de_linhas;
     int _numero_de_colunas;
 };
-#endif // _MATRIZ_H
+
+#endif // MATRIZ_H
