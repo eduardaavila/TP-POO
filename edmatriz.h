@@ -27,6 +27,7 @@ public:
 private:
     int _numero_de_linhas;
     int _numero_de_colunas;
+    int **M;
 };
 
 #endif // MATRIZ_H
