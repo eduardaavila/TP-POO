@@ -36,8 +36,8 @@ public:
     void AlteraValor(); //Altera o valor de uma posição da matriz.
     void ModificaElementos0(); //Modifica os elementos da matriz para 0.
     void ModificaElementos1(); //Modifica os elementos da Matriz com 1.
-    void ValorLinha();
-    void ValorColuna();
+    int ValorLinha();
+    int ValorColuna();
 
 private:
     int _numero_de_linhas;
