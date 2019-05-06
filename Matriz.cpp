@@ -23,7 +23,7 @@ Matriz::Matriz(unsigned int linhas, unsigned int colunas, const double &valor=0)
 
     this->M = new double*[linhas];
     for (unsigned int i = 0; i < linhas; ++i)
-    this->M[i] = new double[colunas];
+        this->M[i] = new double[colunas];
 
     for(unsigned int i = 0; i < linhas; i++)
         for(unsigned int j = 0; j < colunas; j++)
@@ -50,39 +50,42 @@ Matriz::~Matriz(){
     delete [] this->M;
 }
 
-void Matriz::ValorLinha(){
+int Matriz::ValorLinha(){
     int linhas;
     cout << "Insira a quantidade de linhas da matriz:" << endl;
     cin >> linhas;
     this->_numero_de_linhas = linhas;
+    return linhas;
 }
 
-void Matriz::ValorColuna(){
+int Matriz::ValorColuna(){
     int colunas;
     cout << "Insira a quantidade de colunas da matriz:" << endl;
     cin >> colunas;
     this->_numero_de_colunas = colunas;
+    return colunas;
 }
 
 void Matriz::MatrizIdentidade(){
     for(unsigned int i = 0; i < this->_numero_de_linhas; i++){
         for(unsigned int j = 0; j < this->_numero_de_colunas; j++){
-            if (_numero_de_linhas==_numero_de_colunas)
+            if (i == j){
                 this->M[i][j] = 1;
-            else
+            }
+            else{
                 this->M[i][j] = 0;
+            }
         }
     }
 }
 
 void Matriz::AlteraValor(){
     unsigned int nL, nC;
-    char resp[3];
     cout << "Digite a posicao que voce deseja alterar:" << endl;
     cin >> nL;
     cin >> nC;
     cout << "Digite o valor que deseja inserir:" << endl;
-    cin >> this->M[nL][nC];
+    cin >> this->M[nL-1][nC-1];
 }
 
 /*Matriz Matriz::SomaMatriz(Matriz a){
